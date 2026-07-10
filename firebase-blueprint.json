@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "SystemConfig": {
+      "title": "SystemConfig",
+      "description": "System configuration and administrative settings",
+      "type": "object",
+      "properties": {
+        "adminEmail": {
+          "type": "string",
+          "description": "Email address of the primary website administrator"
+        },
+        "allowedEmails": {
+          "type": "string",
+          "description": "JSON serialized list of allowed email addresses who can log in"
+        },
+        "replaceKeywords": {
+          "type": "string",
+          "description": "JSON serialized array of keyword replacement rules"
+        },
+        "notionApiKey": {
+          "type": "string",
+          "description": "Admin configured Notion API key"
+        },
+        "notionParentPageId": {
+          "type": "string",
+          "description": "Admin configured Notion Parent Page ID"
+        },
+        "geminiApiKey": {
+          "type": "string",
+          "description": "Admin configured Gemini API key"
+        }
+      },
+      "required": ["adminEmail", "allowedEmails", "replaceKeywords"]
+    }
+  },
+  "firestore": {
+    "system/config": {
+      "schema": "SystemConfig",
+      "description": "Global administrative configurations"
+    }
+  }
+}

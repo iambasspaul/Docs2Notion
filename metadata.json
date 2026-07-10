@@ -1,0 +1,6 @@
+{
+  "name": "Google Docs to Notion ETL",
+  "description": "An interactive ETL pipeline that authenticates with Google and Notion, reads Google Docs, applies cleaning/transformations (powered by Gemini AI), and loads them into Notion pages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
